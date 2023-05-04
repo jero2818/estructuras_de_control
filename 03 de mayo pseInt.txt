@@ -1,0 +1,280 @@
+20/abril/2023
+
+jeronimo rios toro.
+
+EJERCICIO_MIENTRAS
+
+Algoritmo Ejercicio_mientras
+	
+	Definir nota Como Entero
+	Escribir  "Ingrese una nota valida"
+	leer nota
+	
+	Mientras nota<0 o nota>10 Hacer
+		
+		Escribir  "Ingrese una nota valida"
+		leer nota
+		
+	Fin Mientras
+	
+	Escribir "La nota es correcta"
+	
+FinAlgoritmo
+*************************************************************************************************************************
+
+EJERCICIO_VOCAL_SECRETA
+
+Diseña un programa que guarde una vocal secreta en una variable, debemos pedirle al usuario
+que intente adivinar la vocal secreta, e intentará tantas veces como sea necesario hasta que la
+adivine.
+
+Algoritmo Vocal_secreta
+	Definir vocal Como Caracter
+	Escribir "Adivine la vocal"
+	leer vocal
+	Mientras vocal<> "a" y vocal <> "A" Hacer
+		Escribir "Ingrese otra vocal"
+		leer vocal
+	Fin Mientras
+	Escribir "La vocal es la correcta"
+	
+	
+FinAlgoritmo
+
+**************************************************************************************************************************
+DETECCIÓn_ERRORES
+
+CON_ERRORES
+
+Algoritmo Correccion_Mientras
+Definir num Como Entero
+//El programa ingresará números mientras sean PARES
+Escribir "Ingrese un número"
+Leer num
+Mientras num 2 == 0 Hacer
+Escribir "Ingrese otro número"
+
+FinAlgoritmo
+
+SIN_ERRORES
+
+Algoritmo Correccion_Mientras
+	Definir num Como Entero
+	//El programa ingresará números mientras sean PARES
+	Escribir "Ingrese un número"
+	Leer num
+	Mientras num Mod 2=0 Hacer
+		
+		Escribir "Ingrese otro número"
+		leer num
+	FinMientras
+	Escribir "El numero no es par"
+	
+	
+FinAlgoritmo
+**************************************************************************************************************************
+EJEMPLO_MIENTRAS_QUE
+
+Algoritmo EjemploMientraQue
+ Definir nota Como Entero
+ Hacer
+	 Escribir "Ingrese una nota valida"
+	 leer nota
+ Mientras Que nota<0 o nota>10
+ Escribir "La nota es correcta"
+FinAlgoritmo
+
+**************************************************************************************************************************
+
+EJERCICIO_VOCAL_SECRETA_||
+
+Vamos a hacer nuevamente el ejercicio de la vocal misteriosa, pero esta vez con una estructura
+Hacer-Mientras. ¿Puedes notar cual es la diferencia entre ambas estructuras?
+
+
+Algoritmo VocalSecreta2
+	definir vocal Como Cadena
+	
+	Escribir "Ingrese una vocal"
+	leer vocal
+	vocal=Mayusculas (vocal)
+		Repetir
+			escribir"ingrese una vocal"
+			leer vocal
+		Hasta Que vocal="a" 
+		Escribir "La vocal es correcta"
+	
+FinAlgoritmo
+	
+**************************************************************************************************************************
+Deteccion_Errores
+
+CON_ERRORES
+Algoritmo Correccion_HacerMientras
+num Como Entero
+Repet
+Escribir "Ingrese un número PAR"
+Leer num
+Mientras Qe num MOD 2 0
+FinAlgoritmo
+
+SIN_ERRORES
+
+Algoritmo Correccion_HacerMientras
+	Definir  num Como Entero
+	
+	Hacer
+	Escribir "Ingrese un número "
+	Leer num
+	
+	Mientras que num MOD 2 <> 0 
+		Escribir "el numero es par"
+FinAlgoritmo
+**************************************************************************************************************************
+EJERCICIO_PARA
+
+Algoritmo Ejemplo_para
+	definir i como entero
+	
+	para i = 1 hasta 10 Con Paso 1 hacer 
+		Escribir "La tabla del 2 es: " i*2
+	FinPara
+FinAlgoritmo
+	
+**************************************************************************************************************************
+EJERCICIO_NUMERO_MAYOR
+
+Escribir una estructura PARA que le solicite al usuario varios números y al finalizar muestre el
+mayor número ingresado.
+
+
+Algoritmo num_mayor
+	definir num,i,may Como Entero
+
+
+	
+	Para i=1 Hasta 5 Con Paso 1 Hacer
+		
+		Escribir "Ingresa un número"
+		leer num
+		Si num > MAYOR Entonces
+			MAYOR = num
+		Fin Si	
+	Fin Para
+	
+		Escribir "El número mayor es :" MAYOR
+
+**************************************************************************************************************************
+03/MAYO/2023
+
+EJERCICIO_1
+
+Escriba un programa en el cual se ingrese un número y mientras ese número sea mayor de 10, se pedirá el número de nuevo.
+
+Algoritmo Ejercicio1
+	Definir num Como Entero
+	Escribir "Ingrese un numero"
+	leer num
+	Mientras num>10 Hacer
+		Escribir "Escriba otro numero"
+		leer num
+	Fin Mientras
+FinAlgoritmo
+**************************************************************************************************************************
+
+EJERCICIO_2
+
+Escriba un programa que solicite dos números enteros (mínimo y máximo). A continuación, se debe pedir al usuario que ingrese números enteros situados entre el máximo y mínimo.
+Cada vez que un número se encuentre entre ese intervalo, se sumara uno a una variable.
+El programa terminará cuando se escriba un número que no pertenezca a ese intervalo, y al finalizar se debe mostrar por pantalla la cantidad de números ingresados dentro del intervalo.
+
+Algoritmo Ejercicio2
+	Definir numMin,numMax,num,cont Como Entero
+	
+	Escribir "Digite el número minimo"
+	Leer numMin
+	Escribir "Digite el número maximo"
+	Leer numMax
+	Escribir "Digite un número"
+	Leer num
+	Mientras num>=numMin y num<=numMax Hacer
+		Escribir "ingrese otro número"
+		leer num
+		cont=cont+1
+	Fin Mientras
+	Escribir "El Numero ingresado no esta entre el rango establecido"
+	Escribir "La cantidad de números ingresados entre el rango establecido es de: " cont
+	
+FinAlgoritmo
+
+**************************************************************************************************************************
+EJERCICIO_3
+
+Escriba un programa que solicite al usuario números decimales mientras que el usuario escriba números mayores al primero que se ingresó. Por ejemplo: si el usuario ingresa como primer número un 3.1, y luego ingresa un 4, el programa debe solicitar un tercer número. El programa continuará solicitando valores sucesivamente mientras los valores ingresados sean mayores que 3.1, caso contrario, el programa finaliza.
+
+
+Algoritmo Ejercicio2
+	Definir num,numIn Como real
+	Escribir "Digite un número decimal"
+	Leer numIn
+	Escribir "Digite otro  númeron decimal"
+	Leer num
+	Mientras num>numIn  Hacer
+		Escribir "ingrese otro número decimal"
+		leer num
+	Fin Mientras
+	Escribir "El número ingresado es menor al número inicial"
+	
+FinAlgoritmo
+
+**************************************************************************************************************************
+EJERCICIO_4
+
+Calcular las calificaciones de un grupo de alumnos. La nota final de cada alumno se calcula según el siguiente criterio: la parte práctica vale el 10%; la parte de problemas vale el 50% y la parte teórica el 40%. El programa leerá el nombre del alumno, las tres notas obtenidas, mostrará el resultado por pantalla, y a continuación volverá a pedir los datos del siguiente alumno hasta que el nombre sea una cadena vacía. Las notas deben estar comprendidas entre 0 y 10, y si no están dentro de ese rango no se imprimirá el promedio y se mostrará un mensaje de error.
+
+Algoritmo ejercicio_4_bucle_mientras
+	definir nom_Alum Como cadena
+	definir practica, problemas, teorica, nota_F Como real
+	Escribir  "Ingrese el nombre del alumno"
+	leer nom_Alum
+	
+	Mientras nom_Alum<> "" Hacer
+		Mostrar "Ingrese la nota de las practica"
+		leer practica
+		Mostrar "ingrese la nota de los problemas"
+		leer problemas
+		Mostrar "ingrese la nota teorica"
+		Leer teorica
+		si practicaz>=0 y practicas<=10 y problemas>=0 y problemas<=10 y teorica>=0 y teoricas<=10 Entonces
+			nota_F=(practica*0.10)+(problemas*0.50)+(teorica*0.40)
+			Mostrar "La nota final del estudiante " nomAlum " es de " nota_F
+		SiNo
+			Mostrar "Error el dato ingresado no es valido, recuerda que las notas van del 0 al 10"
+		Finsi
+		Mostrar "Ingrese el nombre del alumno"
+		leer nom_Alum
+	FinMientras
+	Mostrar "No se a ingresado ningún nombre"
+FinAlgoritmo
+
+**************************************************************************************************************************
+
+EJERCICIO_5
+
+Escribir un programa que calcule cuántos digitos tiene un número entero positivo sin convertirlo a cadena (pista: se puede hacer dividiendo varias veces entre 10).
+
+Algoritmo contador_digitos
+	Definir num,cont Como Entero
+	Escribir "Digite Un número"
+	Leer num
+	cont=0
+	Mientras num>=1 Hacer
+		num=trunc(num/10)
+		
+		cont=cont+1
+	Fin Mientras
+	Escribir "El numero ingresado tiene " cont " digitos"
+	
+FinAlgoritmo
+
+
